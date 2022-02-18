@@ -1,15 +1,15 @@
 module.exports = {
-  content : [
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  theme : {
-    extend : {
-      colors : {
-        "socialo" : "#816AFE",
-        "socialo-light" : "#937FFF",
-      }
+  theme: {
+    extend: {
+      colors: {
+        socialo: "#816AFE",
+        "socialo-light": "#937FFF",
+      },
     },
   },
-  plugins : [],
-}
+  plugins: [],
+};
