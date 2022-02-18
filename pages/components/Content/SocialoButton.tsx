@@ -7,7 +7,7 @@ function SocialoButton(props: {purple: boolean, text: string, href: string}) {
     if(purple){
         return (
             <div>
-                <Link passHref href={href}>
+                <Link passHref href={"/main"}>
                     <Button className='bg-socialo-light text-white hover:bg-socialo-light hover:text-white rounded-full px-4 py-5 w-40 h-9' variant='contained'>
                         <p className='normal-case font-bold text-xl'>{text}</p>
                     </Button>
@@ -17,7 +17,7 @@ function SocialoButton(props: {purple: boolean, text: string, href: string}) {
     }else{
         return (
             <div>
-                <Link passHref href={href}>
+                <Link passHref href={"/main"}>
                     <Button className='bg-white text-socialo hover:bg-white hover:text-socialo rounded-full px-4 py-5 w-40 h-9' variant='contained'>
                         <p className='normal-case font-bold text-xl'>{text}</p>
                     </Button>
