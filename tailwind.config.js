@@ -4,10 +4,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      monserrant: 'Montserrat'
+    extend: {
+      colors: {
+        "socialo": "#816AFE",
+        "socialo-light": "#937FFF",
+      }
     },
-    extend: {},
   },
   plugins: [],
 }
