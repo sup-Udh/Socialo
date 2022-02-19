@@ -1,9 +1,20 @@
-function main() {
-    return (
-        <div className="flex items-center justify-center space-x-10 content-evenly h-[calc(100vh-8rem)] font-bold">
-            ayo main stuff
-        </div>
-    );
-}
+import { useSession, signIn, signOut } from "next-auth/react"
 
-export default main;
+
+export default function Component() {
+  const { data: session } = useSession()
+  if (session) {
+    return (
+      <>
+        Signed in as {session?.user?.email} <br />
+        <button onClick={() => signOut()}>Sign out</button>
+      </>
+    )
+  }
+  return (
+    <>
+      Not signed in <br />
+      <button onClick={() => signIn()}>Sign in</button>
+    </>
+  )
+}
