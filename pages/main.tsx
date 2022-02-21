@@ -1,12 +1,7 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 
-
 export default function Component() {
-  
-  async function PostData(){
-    
 
-  }
 
 
   const { data: session } = useSession()
