@@ -5,8 +5,10 @@ export default function Component() {
 
 
   const { data: session } = useSession()
+  // if the session was detected?
   if (session) {
 
+    // requesting from the postgress database for the user info via the next js routes
     axios.get('/api/prismaGet')
   .then(function (response) {
     // handle success
@@ -18,6 +20,8 @@ export default function Component() {
   })
 
 
+  // reading the next-atuh cookie
+
     return (
       <>
         Signed in as {session?.user?.email} <br />
@@ -27,6 +31,8 @@ export default function Component() {
       </>
     )
   }
+
+  // if the session was not detected?
   return (
     <>
       Not signed in <br />
