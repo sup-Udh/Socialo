@@ -1,10 +1,22 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import prisma from "../prisma/prisma"
+import axios from "axios";
 export default function Component() {
 
 
   const { data: session } = useSession()
   if (session) {
+
+    axios.get('/api/prismaGet')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+
 
     return (
       <>
