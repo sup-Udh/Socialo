@@ -1,6 +1,5 @@
 
   import prisma from  "../../prisma/prisma";
-  
   // async fucntion named as test 
 //   export default 
 export default function PrismaReqHandler(){
@@ -10,9 +9,12 @@ export default function PrismaReqHandler(){
     async function Test(){
         const user = await prisma.user.findUnique({
           where: {
-            id: 'ckzwfx6510006o0dorc3xdqfg',
+	// where the id is-
+            id: "ckzwfx6510006o0dorc3xdqfg"
           },
         })
+
+// printing the results
     
         console.log(user)
         

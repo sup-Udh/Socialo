@@ -1,22 +1,15 @@
 import { useRouter } from 'next/router'
+import axios from "axios";
 
-const Post  = () => {
-    const router = useRouter()
-    const { pid } = router.query
-    return (
-        "Post: " + pid
-    )
-}
 
-export default Post
+export default function GetPid(){
+  const router = useRouter();
+  var  { pid }  = router.query;
+  
 
-// const Post = () => {s
-//   const router = useRouter()
-//   const { pid } = router.query
+      return(
+        "Post:" + pid
+      )
+    }
+  
 
-//   return (
-//       <p>Post: {pid}</p>
-//   )
-// }
-
-// export default Post
