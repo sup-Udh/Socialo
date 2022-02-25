@@ -1,6 +1,8 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import prisma from "../prisma/prisma"
 import axios from "axios";
+
+
 export default function Component() {
 
 
@@ -35,8 +37,12 @@ export default function Component() {
   // if the session was not detected?
   return (
     <>
-      Not signed in <br />
-      <button onClick={() => signIn("Github")}>Sign in</button>
+    <h1 className="text-center mt-[10px]">Hey There! Your Not Logged Into Your Account!</h1>
+     <br />
+     <div className="text-ceter mt-[10px]">
+     <button onClick={() => signIn("Github")}>Sign in</button>
+
+     </div>
     </>
   )
   
