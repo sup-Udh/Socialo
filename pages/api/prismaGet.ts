@@ -16,7 +16,6 @@ export default function PrismaReqHandler(){
 
 // printing the results
     
-        console.log(user)
         
       }
       // calling the async function
