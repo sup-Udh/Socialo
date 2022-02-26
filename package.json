@@ -22,6 +22,7 @@
     "next-auth": "^4.2.1",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
+    "types": "file:../../../../next-auth",
     "typings": "^2.1.1"
   },
   "devDependencies": {
