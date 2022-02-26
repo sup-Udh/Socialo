@@ -1,6 +1,5 @@
 import { useSession, signIn, signOut } from "next-auth/react"
-import prisma from "../prisma/prisma"
-import axios from "axios";
+
 
 import React, {useState, useEffect} from "react";
 
@@ -12,7 +11,6 @@ export default function Component() {
 
 
 
-  var image = session?.user?.image
 
   if (session){
     return (
