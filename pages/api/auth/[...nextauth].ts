@@ -6,6 +6,12 @@ import { PrismaClient } from "@prisma/client"
 import GoogleProvider from "next-auth/providers/google";
 
 
+
+let GITHUB_ID = process.env.GITHUB_ID
+let GITHUB_SECRET = process.env.GITHUB_SECRET
+let GOOGLE_ID = process.env.GOOGLE_ID
+let GOOGLE_SECRET = process.env.GOOGLE_SECRET
+
 const prisma = new PrismaClient()
 // import google provider
 
@@ -16,12 +22,12 @@ export default NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
     GithubProvider({
-      clientId: process.env.GITHUB_ID, // process.env.GITHUB_ID
-      clientSecret: process.env.GITHUB_SECRET, // process.env.GITHUB_SECRET
+      clientId: GITHUB_ID, // process.env.GITHUB_ID
+      clientSecret: GITHUB_SECRET, // process.env.GITHUB_SECRET
     }),
     GoogleProvider({
-      clientId: process.env.GOOGLE_ID!, // process.env.GOOGLE_ID
-      clientSecret: process.env.GOOGLE_SECRET!, // process.env.GOOGLE_SECRET
+      clientId: GOOGLE_ID!, // process.env.GOOGLE_ID
+      clientSecret: GOOGLE_SECRET!, // process.env.GOOGLE_SECRET
     }),
 
     
