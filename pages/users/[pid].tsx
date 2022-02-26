@@ -13,7 +13,13 @@ export default function GetPid({users} : {users:any}) {
           {/* Prints the pid as usual. */}
             <p>Post: {pid}</p>
             <br />
-            <h1>{users.name}</h1>
+            <h1>Hey! This is{users.name}</h1>
+            <br />
+            <h2>My cool id is {users.id}</h2>
+            <br /> 
+            <h3>My cool email is {users.email}</h3>
+            {/* image */}
+            <img src={users.image} alt="avatar" />
             
         </div>
       

@@ -29,6 +29,7 @@ export default function Component() {
         Signed in as {session?.user?.email} <br />
         Your name is {session?.user?.name} <br />
         <br />
+	Your id is {session?.user?.id} <br />
         <ul>
           {posts.map(post => (
             <li key={post.id}>
