@@ -7,6 +7,7 @@ import React, {useState, useEffect} from "react";
 export default function Component() {
 
 
+
   const { data: session } = useSession()
   console.log(session)
 
@@ -22,6 +23,8 @@ export default function Component() {
     })
   },[] )
 
+  var image = session?.user?.image
+
   if (session){
     return (
       
@@ -33,7 +36,7 @@ export default function Component() {
         </h1>
         <div className="flex items-center justify-center  content-evenly ">
           <div>
-          <img className="rounded-full"src={session?.user?.image} alt="avatar"  height={100} width={100}/></div>
+          <img className="rounded-full"src={session?.user?.image || ""} alt="avatar"  height={100} width={100}/></div>
 
 
         </div>
