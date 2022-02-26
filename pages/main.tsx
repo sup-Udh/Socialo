@@ -9,19 +9,8 @@ export default function Component() {
 
 
   const { data: session } = useSession()
-  console.log(session)
 
-  const [posts, setPosts] = useState([])
-  useEffect(() => {
-    axios.get("/api/prismaGet")
-    .then(res => {
-      console.log(res)
-      setPosts(res.data)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  },[] )
+
 
   var image = session?.user?.image
 
