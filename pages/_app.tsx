@@ -3,9 +3,7 @@ import "tailwindcss/tailwind.css";
 import '../styles/globals.css'
 
 
-export default function App({
-  Component,
-  pageProps: { session, ...pageProps }
+export default function App({Component}: {Component:any},pageProps: { session: any, ...pageProps: any[] }) {
 }) {
   return (
     // `session` comes from `getServerSideProps` or `getInitialProps`.

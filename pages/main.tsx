@@ -26,17 +26,26 @@ export default function Component() {
     return (
       
       <>
-        Signed in as {session?.user?.email} <br />
-        Your name is {session?.user?.name} <br />
-        <br />
-	Your id is {session?.user?.id} <br />
-        <ul>
-          {posts.map(post => (
-            <li key={post.id}>
-              {post.email}
-            </li>
-          ))}
-        </ul>
+      <div className="text-center">
+        <h1>
+        Signed in as {session?.user?.email}
+
+        </h1>
+        <div className="flex items-center justify-center  content-evenly ">
+          <div>
+          <img className="rounded-full"src={session?.user?.image} alt="avatar"  height={100} width={100}/></div>
+
+
+        </div>
+
+        <h2>Hey! this is {session?.user?.name}</h2>
+
+        <h2>My cool id!- {session.user?.id}</h2>
+
+  </div>
+
+
+     
 
         
 
