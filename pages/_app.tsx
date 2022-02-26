@@ -1,15 +1,15 @@
 import { SessionProvider } from "next-auth/react"
 import "tailwindcss/tailwind.css";
-import '../styles/globals.css'
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
 
-
-export default function App({Component}: {Component:any},pageProps: { session: any, ...pageProps: any[] }) {
-}) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
   return (
-    // `session` comes from `getServerSideProps` or `getInitialProps`.
-    // Avoids flickering/session loading on first load.
     <SessionProvider session={session}>
       <Component {...pageProps} />
     </SessionProvider>
   )
-}
+} 

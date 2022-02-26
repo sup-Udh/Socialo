@@ -14,12 +14,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": false,
     "suppressImplicitAnyIndexErrors": true,
 
 
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/auth/[...nextauth].js"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules",
+    "/node_modules",
+    "../node_modules",
+    "*node_modules*",
+    "/node_modules*",
+    "angular2",
+    "rxjs",
+    "typings"],
 }
