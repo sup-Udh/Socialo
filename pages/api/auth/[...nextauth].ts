@@ -16,16 +16,15 @@ export default NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
     GithubProvider({
-      clientId: "a9cb322df4f92f4ae260", // process.env.GITHUB_ID
-      clientSecret: "68b4833091c42cdb61f542d104310c013e1c8dfe", // process.env.GITHUB_SECRET
+      clientId: process.env.GITHUB_ID, // process.env.GITHUB_ID
+      clientSecret: process.env.GITHUB_SECRET, // process.env.GITHUB_SECRET
     }),
     GoogleProvider({
-      clientId: "d3igeh48bvfku7ir1ffn6jpnidb3lst2.apps.googleusercontent.com", // process.env.GOOGLE_ID
-      clientSecret: "eTNNTN_iVneczu1MaTHdNEOUT5SA", // process.env.GOOGLE_SECRET
+      clientId: process.env.GOOGLE_ID!, // process.env.GOOGLE_ID
+      clientSecret: process.env.GOOGLE_SECRET!, // process.env.GOOGLE_SECRET
     }),
 
     
-
 
 
     
