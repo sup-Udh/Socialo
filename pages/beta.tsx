@@ -2,8 +2,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import tick from "../public/tick.svg"
+import vector from "../public/vector.svg"
 
 export default function Home() {
+
+    
   return (
     <div>
       <Head>
@@ -12,22 +16,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="h-[4rem] justify-center fixed top-0 w-screen items-center flex noto leading-none select-none">
-        <nav className="w-[90%] justify-between sflex">
-          <ul className="hover:text-slate-200 text-white font-medium text-[1.25rem]">
-            <a href="/home" className="px-4">Home</a>
-            <a href="/about" className="px-4">About</a>
-            <a href="/beta" className="px-4 active">Pricing</a>
-          </ul>
-        </nav>
-      </header>
-
       <main className="px-40 pt-24 flex justify-between w-screen h-screen">
         <div className="block py-14 text-left">
           <h1 className="text-white inter text-[2.5rem] dd">Beta Plans -</h1>
           <p className="text-white text-[1.75rem] font-medium py-4">
             <ul className="df ">
-              <li> <img src="/tick.svg" /> <span>Custom Domains</span></li>
+              <li> <img src="./tick.svg" /> <span>Custom Domains</span></li>
               <li> <img src="/tick.svg" /> <span>Tags</span></li>
               <li> <img src="/tick.svg" /> <span>Add Your Socials!</span></li>
               <li> <img src="/tick.svg" /> <span>Mobile Design Coming soon!</span></li>
@@ -35,7 +29,12 @@ export default function Home() {
           </p>
         </div>
 
-        <img className="flex h-[28rem]" src="/vector.svg"/>
+        <Image 
+            src={vector}
+            height={300}
+            width={300}
+        />
+
       </main>
     </div>
   );
