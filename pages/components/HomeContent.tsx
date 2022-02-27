@@ -1,5 +1,7 @@
 import Image from "next/image";
 import SocialoButton from "./Content/SocialoButton";
+import Link from "next/link";   //import this
+
 
 function Content() {
     return (
@@ -9,7 +11,8 @@ function Content() {
                     <h2 className="text-[35px] w-[22.5rem] drop-shadow-md">Create Your Profiles With Your <span className="font-bold">Social Accounts</span></h2>
                     <SocialoButton text="Try Now!" href="/" purple={true}/>
                 </div>
-                <h3>*Note: The App Is still Under Development (<a href="/beta">Beta</a> Is Out)</h3>
+                <h3>*Note: The App Is still Under Development (<Link href="/beta">
+                <a>Beta</a></Link> Is Out)</h3>
             </div>
 
             <div className="flex-0.5">
