@@ -43,7 +43,8 @@ export default function GetPid({users} : {users:any}) {
         })
         return {
             paths,
-            fallback: false
+            fallback: false 
+            // false means that the page will be rendered if the path is not found
         }
     }
 
